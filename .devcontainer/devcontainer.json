@@ -3,7 +3,7 @@
 {
 	"name": "Docker in Docker",
 	// Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
-	"image": "mcr.microsoft.com/devcontainers/base:bullseye",
+	"image": "mcr.microsoft.com/devcontainers/base:bookworm",
 
 	"features": {
 		"ghcr.io/devcontainers/features/docker-in-docker:2": {
@@ -12,9 +12,11 @@
 			"moby": "true"
 		},
 		"ghcr.io/devcontainers/features/python:1": {
-			"version": "3.11"
+			"version": "3.13"
 		},
-		"ghcr.io/devcontainers/features/node:1": {}
+		"ghcr.io/devcontainers/features/node:1": {
+			"version": "20"
+		}
 	},
 
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
@@ -31,7 +33,7 @@
 
 	"customizations": {
 		"vscode": {
-			"extentions": [
+			"extensions": [
 				"amazonwebservices.aws-toolkit-vscode"
 			]
 		}

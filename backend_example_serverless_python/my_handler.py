@@ -11,11 +11,11 @@ class MyService(Construct):
         layer = lambda_.LayerVersion(
                 self, "MyLayer",
                 code=lambda_.Code.from_asset("lambda_layer"),
-                compatible_runtimes=[lambda_.Runtime.PYTHON_3_11])
+                compatible_runtimes=[lambda_.Runtime.PYTHON_3_13])
 
         handler = lambda_.Function(
                 self, "MyHandler",
-                runtime=lambda_.Runtime.PYTHON_3_11,
+                runtime=lambda_.Runtime.PYTHON_3_13,
                 code=lambda_.Code.from_asset("resources"),
                 handler="handler.handler",
                 layers=[layer])
